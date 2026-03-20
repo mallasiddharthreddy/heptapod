@@ -58,4 +58,4 @@ literature (see CMS-DP-2020-020) because it only needs good-run training data.
 
 ## Tool Count
 
-19 tool classes across 4 sub-directories + 1 README + 5 `__init__.py` = 25 files.
+12 tool classes across 4 sub-directories + 1 README + 5 `__init__.py` files = 18 files in tools/dqm/. Including 3 orchestration files in examples/ and prompts/, the total contribution is 15 new files across the HEPTAPOD codebase.

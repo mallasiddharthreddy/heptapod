@@ -17,10 +17,10 @@ class DQMIOReaderTool(BaseTool):
     """
     Read CMS DQM histograms from a DQMIO ROOT file and write them to evtjsonl-1.0 format.
 
-    DQMIO ROOT files contain per-run and per-lumi MonitorElement histograms for every
-    CMS detector subsystem. This tool reads those histograms using uproot, extracts bin
-    counts and edges, and writes one JSON line per MonitorElement to a JSONL output file
-    compatible with all downstream HEPTAPOD analysis tools.
+    DQMIO ROOT files store MonitorElement histograms in a TTree-based format. This tool
+    navigates the Indices TTree to locate MonitorElements by (run, lumi, type, path),
+    reads bin data from the TH1Fs/TH2Fs/TProfiles TTrees, and writes one JSON line per
+    MonitorElement to a JSONL output file compatible with all downstream HEPTAPOD tools.
 
     Inputs (runtime):
       - dqmio_path: path (relative to base_directory) to a DQMIO ROOT file (.root)
